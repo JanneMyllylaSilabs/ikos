@@ -4,7 +4,9 @@ on:
   pull_request:
 jobs:
   build:
-    runs-on: macos-latest
-    env:
-      LDFLAGS:  "-L/opt/homebrew/opt/llvm@14/lib"
-      CPPFLAGS: "-I/opt/homebrew/opt/llvm@14/include"
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
