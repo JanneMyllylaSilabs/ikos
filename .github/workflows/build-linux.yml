@@ -38,3 +38,8 @@ jobs:
       - name: Confirm that it runs
         run: |
           ikos --version
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ikos-bin
+          path: /opt/ikos/bin/ikos
